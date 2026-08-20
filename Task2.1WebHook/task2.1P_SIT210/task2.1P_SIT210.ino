@@ -117,10 +117,10 @@ void readSensors() {
 
   //ThingSpeak fields
 
-  //Field 1 = Temperature
+  //Field 1 = Humidity
   ThingSpeak.setField(1,humidity);
 
-  //Field 2 = Humidity
+  //Field 2 = Temperature
   ThingSpeak.setField(2,temperature);
 
   //Field 3 = Light intensity
@@ -154,7 +154,7 @@ void loop() {
   //Read sensors and upload values
   readSensors();
 
-  //ThingSpeak requires at least 15 seconds
+  //ThingSpeak requires at least 30 seconds
   //between channel updates
   delay(30000);
 }
